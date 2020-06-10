@@ -9,7 +9,10 @@ CREATE TABLE livro(
     titulo VARCHAR(150),
     autor VARCHAR(150),
     genero VARCHAR(150)
-); CREATE TABLE bibliotecario(
+);
+
+
+ CREATE TABLE bibliotecario(
     codBiblio INT PRIMARY KEY AUTO_INCREMENT,
     telefone INT,
     email VARCHAR(150) UNIQUE,
@@ -58,6 +61,36 @@ insert into livro(editora, titulo, autor, genero) values
 ('Disney Publishing Worldwide', 'Percy Jackson - A Batalha do Labirinto', 'Rick Riordan', 'Aventura'),
 ('Pottermore', 'Harry Potter e a Pedra Filosofal', 'J. K. Rowling', 'Fantasia'),
 ('Pieco', 'Acredite se puder', 'Felipe Neto', 'Comédia');
+
+use biblioteca;
+ALTER TABLE
+    livro ADD COLUMN numPag int;
+ALTER table livro ADD COLUMN exemplares int;
+
+use biblioteca;
+update livro set numPag = 230 WHERE codLivro = 1;
+update livro set numPag = 200 WHERE codLivro = 2;
+update livro set numPag = 212 WHERE codLivro = 3;
+update livro set numPag = 190 WHERE codLivro = 4;
+update livro set numPag = 100 WHERE codLivro = 5;
+update livro set numPag = 300 WHERE codLivro = 6;
+update livro set numPag = 200 WHERE codLivro = 7;
+update livro set numPag = 150 WHERE codLivro = 8;
+update livro set numPag = 223 WHERE codLivro = 9;
+update livro set numPag = 260 WHERE codLivro = 10;
+
+use bilioteca;
+update livro set exemplares = 4 WHERE codLivro = 1;
+update livro set exemplares = 10 WHERE codLivro = 2;
+update livro set exemplares = 12 WHERE codLivro = 3;
+update livro set exemplares = 30 WHERE codLivro = 4;
+update livro set exemplares = 22 WHERE codLivro = 5;
+update livro set exemplares = 2 WHERE codLivro = 6;
+update livro set exemplares = 12 WHERE codLivro = 7;
+update livro set exemplares = 13 WHERE codLivro = 8;
+update livro set exemplares = 17 WHERE codLivro = 9;
+update livro set exemplares = 19 WHERE codLivro = 10;
+
 
 use biblioteca;
 /*Inserindo valores nos bibliotecários*/
